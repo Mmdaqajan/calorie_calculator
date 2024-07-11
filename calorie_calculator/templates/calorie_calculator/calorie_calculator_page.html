@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	Calorie Calculator
+{% endblock title %}
+
+{% block content %}
+	<section class="contact_section ">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+            <img src="{% static 'images/contact-img.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <div class="form_container pr-0 pr-lg-5 mr-0 mr-lg-2">
+            <div class="heading_container">
+              <h2>
+
+              </h2>
+            </div>
+            <form action="">
+              <div>
+                <input type="number" aria-valuemax="100" aria-valuemin="1" placeholder="20">
+                <label for="activityLevel" dir="ltr" class="text-right d-block">:سن خود را وارد کنید</label>
+              </div>
+              <div>
+                <input type="number" placeholder="80">
+                <label for="activityLevel" dir="ltr" class="text-right d-block">وزن خود را وارد کنید (کیلوگرم)</label>
+
+              </div>
+              <div>
+                <input type="number" placeholder="175">
+                <label for="activityLevel" dir="ltr" class="text-right d-block ">قد خود را وارد کنید (سانتی متر)</label>
+
+              </div>
+              <div class="mt-4 h-100">
+                <select id="activityLevel" name="activity-level" class=" px-3 w-100 ">
+                      <option value="lvl-one">فعالیت سبک (تمرین روزانه اما کار نشستنی)</option>
+                      <option value="lvl-two">فعالیت متوسط (تمرینات با شدت بالا اما کار نشستنی)</option>
+                      <option value="lvl-three">خیلی فعال (تمرین با شدت بالا و کار فعال)</option>
+                      <option value="lvl-four">خیلی خیلی فعال (تمرین با شدت بالا و کار فعال)</option>
+                </select>
+                <label for="activityLevel" dir="ltr" class="text-right d-block">: سطح فعالیت خود را مشخص کنید</label>
+
+              </div>
+              <div class="d-flex ">
+                <button type="submit">
+                  محاسبه
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
